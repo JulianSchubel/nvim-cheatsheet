@@ -43,3 +43,13 @@ No setup. No external files. Just install and press a key.
 ## Requirements  
 
 Neovim ≥ 0.9
+
+## Markdown Rendering
+
+This plugin displays Markdown content using Neovim's normal Markdown filetype.
+
+For best visual rendering, install a Markdown rendering plugin such as:
+
+- https://github.com/MeanderingProgrammer/render-markdown.nvim
+
+The cheatsheet window fully supports conceal-based and Treesitter-based renderers.
