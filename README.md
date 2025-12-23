@@ -24,17 +24,17 @@ No setup. No external files. Just install and press a key.
 
 ```lua
 {
-  "JulianSchubel/nvim-cheatsheet",
-  cmd = { "Cheatsheet" },
-  keys = {
-    { "<leader>?", "<cmd>Cheatsheet<cr>", desc = "Open Neovim cheatsheet" },
-  },
-  opts = {
-    leader = "<leader>?",
-    width_ratio = 0.8,
-    height_ratio = 0.8,
-    border = "rounded",
-  },
+    "JulianSchubel/nvim-cheatsheet",
+    cmd = { "Cheatsheet" },
+    keys = { "<leader>?", "<cmd>Cheatsheet<cr>", desc = "Open Neovim cheatsheet" },
+    config = function()
+        require("cheatsheet").setup({
+            leader = "<leader>?",
+            width_ratio = 0.8,
+            height_ratio = 0.8,
+            border = "rounded",
+        })
+    end,
 }
 ```
 
