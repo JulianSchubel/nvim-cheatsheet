@@ -147,7 +147,7 @@ function Module.open()
     ]]
     vim.wo[win].conceallevel = 3
     --[[ Control when coneal is active depending on mode
-        -- "nc" = conceal in Normal and Command mode (want raw markdown while
+        -- "ncsvi" = conceal in Normal and Command mode (want raw markdown while
         -- editing)
         -- n	Normal
         -- i	Insert
