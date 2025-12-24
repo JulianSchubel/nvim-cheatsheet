@@ -1,6 +1,4 @@
-# Neovim Cheatsheet
-
-## Navigation
+# Navigation
 | Key | Action |
 |----|-------|
 | `h j k l` | Move cursor: Left / Down / Up / Right |
@@ -10,7 +8,10 @@
 | `<C-d> / <C-u>` | Half-page down / up |
 | `<C-f> / <C-b>` | Page down / up |
 
-## Insert mode
+
+---
+
+# Insert mode
 | Key | Action |
 |----|-------|
 | `i / a` | Insert before / after cursor |
@@ -19,7 +20,9 @@
 | `Esc` | Normal mode |
 
 
-## Visual mode
+---
+
+# Visual mode
 | Key | Action |
 |----|-------|
 | `v / V / <C-v>` | Character / line / block |
@@ -27,7 +30,9 @@
 | `y / d / p` | Yank / delete / paste |
 
 
-## Editing
+---
+
+# Editing
 | Key | Action |
 |----|-------|
 | `x` | Delete character |
@@ -40,7 +45,9 @@
 | <C-x> | Decrement number under cursor |
 
 
-## Windows
+---
+
+# Windows
 | Key              | Action                      |
 | ---------------- | --------------------------- |
 | `<C-w>s / <C-w>v`   | Split: horizontal / vertical |
@@ -48,7 +55,9 @@
 | `<C-w>h j k l` | Navigate between windows                    |
 
 
-## Buffers
+---
+
+# Buffers
 | Command           | Action        |
 | ----------------- | ------------- |
 | `:ls`             | List buffers  |
@@ -56,12 +65,17 @@
 | `:bd`             | Delete buffer |
 
 
-## Search
+---
+
+# Search
 - `/ ?` — Search forward / backward
 - `n / N` — Next / previous match
 - `* / #` — Word under cursor
 
-## Text Objects
+
+---
+
+# Text Objects
 | Object         | Description              |
 | -------------- | ------------------------ |
 | `iw / aw`      | Inner / a word           |
@@ -70,7 +84,9 @@
 | `it / at`      | Inside / around HTML tag |
 
 
-## Motions
+---
+
+# Motions
 
 | Motion  | Description           |
 | ------- | --------------------- |
@@ -81,7 +97,9 @@
 | `H M L` | Top / middle / bottom |
 
 
-## Registers
+---
+
+# Registers
 
 | Register | Purpose          |
 | -------- | ---------------- |
@@ -100,7 +118,9 @@
 |`+y`    | Copy to clipboard |
 
 
-## Macros
+---
+
+# Macros
 | Key  | Action         |
 | ---- | -------------- |
 | `qa` | Record macro in register a |
@@ -109,7 +129,9 @@
 | `@@` | Repeat         |
 
 
-## Marks
+---
+
+# Marks
 
 | Command            | Action        |
 | ------------------ | ------------- |
@@ -118,7 +140,9 @@
 | `:lopen`           | Location list |
 
 
-## Search Navigation
+---
+
+# Search Navigation
 
 | Key       | Action            |
 | --------- | ----------------- |
@@ -127,9 +151,11 @@
 | `* / #`   | Word under cursor |
 
 
-## Search Recipes
+---
 
-### Words & Text
+# Search Recipes
+
+## Words & Text
 
 | Recipe | Description | Suggested Use Case |
 | ------ | ----------- | -------- |
@@ -137,7 +163,9 @@
 | `/\v(\w+)\s+\1` | Find repeated consecutive words | Useful for catching typos like `the the`. |
 
 
-### Lines
+---
+
+## Lines
 
 | Recipe | Description | Suggested Use Case |
 | ------ | ----------- | -------- |
@@ -145,7 +173,9 @@
 | `/^\%(.*foo\)\@!` | Match lines NOT containing the word `foo` | Useful when looking for non-conformant records in a known structure  |
 
 
-### Whitespace & Formatting
+---
+
+## Whitespace & Formatting
 
 | Recipe | Description | Suggested Use Case |
 | ------ | ----------- | -------- |
@@ -153,7 +183,9 @@
 | `/\v^.{81,}$` | Find lines longer than `80` characters | Useful for style enforcement |
 
 
-### Numbers & Strings
+---
+
+## Numbers & Strings
 
 | Recipe | Description | Suggested Use Case |
 | ------ | ----------- | -------- |
@@ -162,7 +194,9 @@
 | `/'[^']*'` | Match single-quoted strings | Useful for cleanup and formatting |
 
 
-### Between Delimiters
+---
+
+## Between Delimiters
 
 | Recipe | Description | Suggested Use Case |
 | ------ | ----------- | -------- |
@@ -170,18 +204,24 @@
 | `/\v\[[^\]]*\]` | Text inside brackets | Finding initialised lists / vectors |
 
 
-### Code-Oriented Searches
+--- 
+
+## Code-Oriented Searches
 
 ```vim
 /\v(TODO|FIXME|NOTE) " Find TODO-style comments - Useful navigate to code labelled by TODO-style comment 
 /\v^\s*(function|def|fn)\s+\w+ " Find common function definitions - Useful to cycle through function definitions
 ```
 
-### Regex
+--- 
+
+## Regex
 Neovim uses Vim regex, not PCRE
 Use \v (very magic) to reduce escaping
 
-#### Character Classes
+--- 
+
+## Character Classes
 
 | Pattern    | Meaning                   |
 | ---------- | ------------------------- |
@@ -193,7 +233,9 @@ Use \v (very magic) to reduce escaping
 | `[a-g]`    | Range                     |
 
 
-#### Anchors
+--- 
+
+## Anchors
 
 | Pattern | Meaning             |
 | ------- | ------------------- |
@@ -202,7 +244,9 @@ Use \v (very magic) to reduce escaping
 | `\B`    | Not word boundary   |
 
 
-#### Escaped Characters
+--- 
+
+## Escaped Characters
 
 | Pattern        | Meaning                         |
 | -------------- | ------------------------------- |
@@ -210,7 +254,9 @@ Use \v (very magic) to reduce escaping
 | `\t \n \r`     | Tab / newline / carriage return |
 
 
-#### Groups & Lookarounds
+--- 
+
+## Groups & Lookarounds
 | Pattern   | Meaning                 |
 | --------- | ----------------------- |
 | `(abc)`   | Capture group           |
@@ -221,7 +267,9 @@ Use \v (very magic) to reduce escaping
 | `\@<=abc` | Lookbehind |
 | `\@<!abc` | Negative lookbehind |
 
+
 ---
+
 
 | Example | Description |
 | ------- | ----------- |
@@ -229,8 +277,9 @@ Use \v (very magic) to reduce escaping
 | ```/foo\@<!bar``` | Match bar NOT preceded by foo |
 
 
+---
 
-#### Quantifiers & Alternation
+## Quantifiers & Alternation
 
 | Pattern | Meaning          |    |
 | ------- | ---------------- | -- |
@@ -242,8 +291,9 @@ Use \v (very magic) to reduce escaping
 | `ab     | cd`              | Or |
 
 
+---
 
-#### Tips & Tricks
+## Tips & Tricks
 
 | Pattern | Description |
 |------|-------------|
@@ -272,8 +322,9 @@ Use \v (very magic) to reduce escaping
 | `/foo\@<!bar ` | Match bar only if NOT preceded by foo. |
 
 
+---
 
-## Help
+# Help
 - `:help {topic}` — Help for topic
 
 ---
