@@ -49,9 +49,9 @@ function Module.setup(opts)
         { desc = "Open Neovim cheatsheet" }
     );
 
-    -- Set floating window background to none
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+    -- Set floating window background
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#1f2430" })
+    vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#1f2430", fg = "#6b7089" })
 
     -- Create the user command
     vim.api.nvim_create_user_command(
