@@ -17,12 +17,13 @@ local defaults = {
     height_ratio = 0.75,
     border = "rounded",
     leader = "<leader>?",
+    transparency = 25,
 }
 
 -- get cheatsheet content
 local function read_markdown_file()
     local paths = vim.api.nvim_get_runtime_file("cheatsheet.md", false);
-    if #paths == 0 then 
+    if #paths == 0 then
         return { "Error: cheatsheet.md not found" }
     end
 
@@ -35,6 +36,7 @@ function Module.setup(opts)
     end
 
     Module.opts = vim.tbl_deep_extend("force", defaults, opts or {});
+
     -- assign keymap to the open function
     vim.keymap.set(
         -- normal mode
@@ -47,6 +49,11 @@ function Module.setup(opts)
         { desc = "Open Neovim cheatsheet" }
     );
 
+    -- Set floating window background to none
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+
+    -- Create the user command
     vim.api.nvim_create_user_command(
         "Cheatsheet",
         function() Module.open() end,
@@ -156,6 +163,9 @@ function Module.open()
         -- s	Select
     ]]
     vim.wo[win].concealcursor = "nc"
+
+    -- Set window transparency
+    vim.wo[win].winblend = Module.opts.transparency;
 
     -- buffer local close mappings
     for _, key in ipairs({ "q", "<Esc>" }) do
