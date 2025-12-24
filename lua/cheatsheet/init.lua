@@ -138,9 +138,9 @@ function Module.open()
             -- Add a border around the floating window
             border = Module.opts.border,
             -- Add title
-            title = {
-                {"Neovim-Cheatsheet","#2d4fad"}
-            },
+            -- title = {
+            --     {"Neovim-Cheatsheet","#2d4fad"}
+            -- },
         }
     );
 
