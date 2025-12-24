@@ -221,7 +221,7 @@ Use \v (very magic) to reduce escaping
 
 --- 
 
-## Character Classes
+### Character Classes
 
 | Pattern    | Meaning                   |
 | ---------- | ------------------------- |
@@ -235,7 +235,7 @@ Use \v (very magic) to reduce escaping
 
 --- 
 
-## Anchors
+### Anchors
 
 | Pattern | Meaning             |
 | ------- | ------------------- |
@@ -246,7 +246,7 @@ Use \v (very magic) to reduce escaping
 
 --- 
 
-## Escaped Characters
+### Escaped Characters
 
 | Pattern        | Meaning                         |
 | -------------- | ------------------------------- |
@@ -256,7 +256,7 @@ Use \v (very magic) to reduce escaping
 
 --- 
 
-## Groups & Lookarounds
+### Groups & Lookarounds
 | Pattern   | Meaning                 |
 | --------- | ----------------------- |
 | `(abc)`   | Capture group           |
@@ -279,7 +279,7 @@ Use \v (very magic) to reduce escaping
 
 ---
 
-## Quantifiers & Alternation
+### Quantifiers & Alternation
 
 | Pattern | Meaning          |    |
 | ------- | ---------------- | -- |
@@ -293,7 +293,7 @@ Use \v (very magic) to reduce escaping
 
 ---
 
-## Tips & Tricks
+### Tips & Tricks
 
 | Pattern | Description |
 |------|-------------|
