@@ -311,10 +311,10 @@ Use \v (very magic) to reduce escaping
 | ------- | ----------- |
 | `/foo\zsbar` | Match only part of a word: matches bar in foobar (but not foo). |
 | `/foo\zebar` | Exlude part of a match: Matches foo in foobar. |
-| `/foo\@=bar` | Match foo only if followed by bar. |
-| `/foo\@!bar` | Match foo only if **not** followed by bar. |
-| `/foo\@<=bar` | Match bar only if preceded by foo. |
-| `/foo\@<!bar ` | Match bar only if NOT preceded by foo. |
+| `/foo(?=bar)` | Match foo only if followed by bar. |
+| `/foo(?!bar)` | Match foo only if **not** followed by bar. |
+| `/foo(?<=bar)` | Match bar only if preceded by foo. |
+| `/foo(?<!bar)` | Match bar only if NOT preceded by foo. |
 
 
 ---
