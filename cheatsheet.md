@@ -30,9 +30,10 @@
 # Visual mode
 | Motion | Description |
 |----|-------|
-| `v` / `V` / `<C-v>` | Character / line / block |
-| `>` / `<` | Indent / unindent |
+| `v` / `V` / `<C-v>` | Character / line / block (rows and columns) |
+| `>` / `<` | indent / unindent |
 | `y` / `d` / `p` | Yank / delete / paste |
+| `U` / `u` / `~` | Uppercase / lowercase / switch casing |
 
 
 ---
@@ -75,7 +76,7 @@
 | `:w` | Write buffer even if there are no changes |
 | `:wq` | Write and quit buffer even if there are no changes |
 | `:wqa` | Write and quit all buffers even if there are no changes |
-| `:x` | Write buffer if there are unsaved changes and quit the current buffer |
+| `:x` | Write buffer if there are unsaved changes and then quit the current buffer |
 | `:xa` / `ZZ` | Write all buffers with unsaved changes and then quit them all |
 
 
@@ -314,6 +315,15 @@ Use \v (very magic) to reduce escaping
 | `/foo\@!bar` | Match foo only if **not** followed by bar. |
 | `/foo\@<=bar` | Match bar only if preceded by foo. |
 | `/foo\@<!bar ` | Match bar only if NOT preceded by foo. |
+
+
+---
+
+# Shell Commands
+
+| Command | Description |
+| ------- | ----------- |
+| `:!<cmd>` | Executes `<cmd>` on visual selection |
 
 
 ---
