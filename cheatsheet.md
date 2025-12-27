@@ -1,5 +1,5 @@
 # Navigation
-| Key | Action |
+| Motion | Description |
 |----|-------|
 | `h` / `j` / `k` / `l` | Move cursor: Left / Down / Up / Right |
 | `w` / `b` / `e` / `ge` | Word Motions: next / previous word / End of word / backward |
@@ -7,12 +7,18 @@
 | `gg` / `G` | Top / bottom of file |
 | `<C-d>` / `<C-u>` | Half-page down / up |
 | `<C-f>` / `<C-b>` | Page down / up |
+| `f{c}`  | Jump to character     |
+| `t{c}`  | Jump until character  |
+| `; ,`   | Repeat / reverse      |
+| `%`     | Matching bracket      |
+| `H M L` | Top / middle / bottom |
+| `ZZ` | Write all buffers with unsaved changes and then quit them all |
 
 
 ---
 
 # Insert mode
-| Key | Action |
+| Motion | Description |
 |----|-------|
 | `i` / `a` | Insert before / after cursor |
 | `I` / `A` | Line start / end |
@@ -23,7 +29,7 @@
 ---
 
 # Visual mode
-| Key | Action |
+| Motion | Description |
 |----|-------|
 | `v` / `V` / `<C-v>` | Character / line / block |
 | `>` / `<` | Indent / unindent |
@@ -33,7 +39,7 @@
 ---
 
 # Editing
-| Key | Action |
+| Motion | Description |
 |----|-------|
 | `x` | Delete character |
 | `dd` / `D` | Delete line / to end |
@@ -48,7 +54,7 @@
 ---
 
 # Windows
-| Key              | Action                      |
+| Motion             | Description                      |
 | ---------------- | --------------------------- |
 | `<C-w>s` / `<C-w>v`   | Split: horizontal / vertical |
 | `<C-w>q`       | Close window                |
@@ -58,18 +64,27 @@
 ---
 
 # Buffers
-| Command           | Action        |
+| Command           | Description        |
 | ----------------- | ------------- |
 | `:ls`             | List buffers  |
 | `:bnext` / `:bprev` | Cycle: Next / previous buffer         |
 | `:bd`             | Delete buffer |
+| `:q` | Quit the current buffer if there are no unsaved changes |
+| `:q!` | Force quit the current buffer even if there is unsaved changes |
+| `:qa` | Quits all buffers except those that have unsaved changes |
+| `:qa!` | Force quit all buffers even if there unsaved changes |
+| `:w` | Write buffer even if there are no changes |
+| `:wq` | Write and quit buffer even if there are no changes |
+| `:wqa` | Write and quit all buffers even if there are no changes |
+| `:x` | Write buffer if there are unsaved changes and then quit the current buffer | 
+| `:xa` | Write all buffers with unsaved changes and then quit them all (equivalent to `ZZ` |
 
 
 ---
 
 # Search
 
-| Key       | Action            |
+| Motion       | Description            |
 | --------- | ----------------- |
 | `/` / `?` | Search forward / backward |
 | `n` / `N`   | Next / previous match   |
@@ -80,25 +95,12 @@
 ---
 
 # Text Objects
-| Object         | Description              |
+| Motion         | Description              |
 | -------------- | ------------------------ |
 | `iw` / `aw`      | Inner / a word           |
 | `ip` / `ap`      | Inner / a paragraph      |
 | `i(` / `i[` / `i{` | Inside delimiters        |
 | `it` / `at`      | Inside / around HTML tag |
-
-
----
-
-# Motions
-
-| Motion  | Description           |
-| ------- | --------------------- |
-| `f{c}`  | Jump to character     |
-| `t{c}`  | Jump until character  |
-| `; ,`   | Repeat / reverse      |
-| `%`     | Matching bracket      |
-| `H M L` | Top / middle / bottom |
 
 
 ---
@@ -125,7 +127,7 @@
 ---
 
 # Macros
-| Key  | Action         |
+| Motion  | Description         |
 | ---- | -------------- |
 | `qa` | Record macro in register a |
 | `q`  | Stop           |
@@ -137,7 +139,7 @@
 
 # Marks
 
-| Command            | Action        |
+| Command            | Description        |
 | ------------------ | ------------- |
 | `:copen` `:cclose` | Quickfix      |
 | `:cnext` `:cprev`  | Navigate      |
@@ -146,11 +148,11 @@
 
 ---
 
-# Search Recipes
+# Search Patterns
 
 ## Words & Text
 
-| Recipe | Description | Suggested Use Case |
+| Pattern | Description | Suggested Use Case |
 | ------ | ----------- | -------- |
 | `/\<word\>` | Match a whole word only (no partial matches) | Useful when searching identifiers or variables. |
 | `/\v(\w+)\s+\1` | Find repeated consecutive words | Useful for catching typos like `the the`. |
@@ -160,7 +162,7 @@
 
 ## Lines
 
-| Recipe | Description | Suggested Use Case |
+| Pattern | Description | Suggested Use Case |
 | ------ | ----------- | -------- |
 | `/^\s*$/` | Match lines containing only whitespace | Useful for cleanup and formatting. |
 | `/^\%(.*foo\)\@!` | Match lines NOT containing the word `foo` | Useful when looking for non-conformant records in a known structure  |
@@ -170,7 +172,7 @@
 
 ## Whitespace & Formatting
 
-| Recipe | Description | Suggested Use Case |
+| Pattern | Description | Suggested Use Case |
 | ------ | ----------- | -------- |
 | `/\s\+$/` | Find trailing whitespace | Useful before commits |
 | `/\v^.{81,}$` | Find lines longer than `80` characters | Useful for style enforcement |
@@ -180,7 +182,7 @@
 
 ## Numbers & Strings
 
-| Recipe | Description | Suggested Use Case |
+| Pattern | Description | Suggested Use Case |
 | ------ | ----------- | -------- |
 | `/\v\d+` | Match integers | Useful when looking for magic numbers |
 | `/"[^"]*"` | Match double-quoted strings | Useful for cleanup and formatting |
@@ -191,7 +193,7 @@
 
 ## Between Delimiters
 
-| Recipe | Description | Suggested Use Case |
+| Pattern | Description | Suggested Use Case |
 | ------ | ----------- | -------- |
 | `/\v\([^)]*\)` | Text inside parentheses | Selecting a block of text |
 | `/\v\[[^\]]*\]` | Text inside brackets | Finding initialised lists / vectors |
