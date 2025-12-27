@@ -67,7 +67,7 @@
 | ----------------- | ------------- |
 | `:ls`             | List buffers  |
 | `:bnext` / `:bprev` | Cycle: Next / previous buffer         |
-| `:bd`             | Delete buffer |
+| `:bd` | Delete buffer |
 | `:q` | Quit the current buffer if there are no unsaved changes |
 | `:q!` | Force quit the current buffer even if there is unsaved changes |
 | `:qa` | Quits all buffers except those that have unsaved changes |
