@@ -264,8 +264,8 @@ Use \v (very magic) to reduce escaping
 | `(?:abc)` | Non-capturing           |
 | `(?=abc)` | Lookahead               |
 | `(?!abc)` | Negative lookahead      |
-| `\@<=abc` | Lookbehind |
-| `\@<!abc` | Negative lookbehind |
+| `?<=abc` | Lookbehind |
+| `?<!abc` | Negative lookbehind |
 
 
 ---
