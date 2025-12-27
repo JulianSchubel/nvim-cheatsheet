@@ -166,7 +166,7 @@ function Module.open()
         -- c	Command
         -- s	Select
     ]]
-    vim.wo[win].concealcursor = "ncvi"
+    vim.wo[win].concealcursor = "nivcs"
 
     -- Set window transparency
     vim.wo[win].winblend = Module.opts.transparency;
