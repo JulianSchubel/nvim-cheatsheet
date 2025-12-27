@@ -166,6 +166,8 @@ function Module.open()
         -- c	Command
     ]]
     vim.wo[win].concealcursor = "nivc"
+    vim.wo[win].cursorline = true
+
 
     -- Set window transparency
     vim.wo[win].winblend = Module.opts.transparency;
