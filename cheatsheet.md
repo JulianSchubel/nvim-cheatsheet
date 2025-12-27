@@ -66,7 +66,7 @@
 | Command           | Description        |
 | ----------------- | ------------- |
 | `:ls`             | List buffers  |
-| `:bnext` / `:bprev` | Cycle: Next / previous buffer         |
+| `:bnext` / `:bprev` | Cycle: Next / previous buffer |
 | `:bd` | Delete buffer |
 | `:q` | Quit the current buffer if there are no unsaved changes |
 | `:q!` | Force quit the current buffer even if there is unsaved changes |
@@ -75,7 +75,7 @@
 | `:w` | Write buffer even if there are no changes |
 | `:wq` | Write and quit buffer even if there are no changes |
 | `:wqa` | Write and quit all buffers even if there are no changes |
-| `:x` | Write buffer if there are unsaved changes and then quit the current buffer | 
+| `:x` | Write buffer if there are unsaved changes and quit the current buffer |
 | `:xa` / `ZZ` | Write all buffers with unsaved changes and then quit them all |
 
 
