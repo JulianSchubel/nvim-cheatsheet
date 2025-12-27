@@ -259,8 +259,8 @@ Use \v (very magic) to reduce escaping
 | `(?:abc)` | Non-capturing           |
 | `(?=abc)` | Lookahead               |
 | `(?!abc)` | Negative lookahead      |
-| `?<=abc` | Lookbehind |
-| `?<!abc` | Negative lookbehind |
+| `(?<=abc)` | Lookbehind |
+| `(?<!abc)` | Negative lookbehind |
 
 
 ---
@@ -295,10 +295,10 @@ Use \v (very magic) to reduce escaping
 | `\v` | **Very magic mode** — treats most characters as special, drastically reducing escaping. Use this first in complex regex. |
 | `\zs` | **Start match here** — excludes everything before it from the final match. Useful in replacements. |
 | `\ze` | **End match here** — excludes everything after it from the final match. |
-| `\@=` | **Positive lookahead** — assert that a pattern follows, without consuming it. |
-| `\@!` | **Negative lookahead** — assert that a pattern does *not* follow. |
-| `\@<=` | **Positive lookbehind** — assert that a pattern precedes the match. |
-| `\@<!` | **Negative lookbehind** — assert that a pattern does *not* precede the match. |
+| `(?=)` | **Positive lookahead** — assert that a pattern follows, without consuming it. |
+| `(?!)` | **Negative lookahead** — assert that a pattern does *not* follow. |
+| `(?<=)` | **Positive lookbehind** — assert that a pattern precedes the match. |
+| `(?<!)` | **Negative lookbehind** — assert that a pattern does *not* precede the match. |
 
 ```vim 
 \v(foo|bar)\d+ " Match foo or bar followed by digits |
