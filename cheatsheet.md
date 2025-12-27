@@ -43,7 +43,7 @@
 | Command | Description |
 | ------- | ----------- |
 | `:!<cmd>` | Executes external command `<cmd>` | 
-| `:<line?>read` / `:<line?>r` | Pipe contents of a file or the output of an external command directly into the current buffer below the cursor or a specified line |
+| `:<line?>read` / `:<line?>r` | Pipe an output directly into the current buffer below the cursor or a specified line |
 
 
 ---
