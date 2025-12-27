@@ -96,7 +96,7 @@ function Module.open()
     vim.api.nvim_buf_set_name(buf, "cheatsheet.md");
 
     -- Prevent user edits to the buffer
-    -- vim.bo[buf].modifiable = false;
+    vim.bo[buf].modifiable = false;
 
     -- Floating window width as percentage of editor width
     local width = math.floor(vim.o.columns * Module.opts.width_ratio);
