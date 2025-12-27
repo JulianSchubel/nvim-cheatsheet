@@ -156,7 +156,7 @@ function Module.open()
         -- 2	Conceal most syntax (recommended)
         -- 3	Conceal everything possible
     ]]
-    vim.wo[win].conceallevel = 2
+    vim.wo[win].conceallevel = 3
     --[[ Control when coneal is active depending on mode
         -- "ncsvi" = conceal in Normal and Command mode (want raw markdown while
         -- editing)
@@ -164,9 +164,8 @@ function Module.open()
         -- i	Insert
         -- v	Visual
         -- c	Command
-        -- s	Select
     ]]
-    vim.wo[win].concealcursor = "nivcs"
+    vim.wo[win].concealcursor = "nivc"
 
     -- Set window transparency
     vim.wo[win].winblend = Module.opts.transparency;
