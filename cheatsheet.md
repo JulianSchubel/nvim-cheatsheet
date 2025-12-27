@@ -1,12 +1,12 @@
 # Navigation
 | Key | Action |
 |----|-------|
-| `h j k l` | Move cursor: Left / Down / Up / Right |
-| `w / b / e / ge ` | Word Motions: next / previous word / End of word / backward |
-| `0 / ^ / $` | Line start / first char / end |
-| `gg / G` | Top / bottom of file |
-| `<C-d> / <C-u>` | Half-page down / up |
-| `<C-f> / <C-b>` | Page down / up |
+| `h` / `j` / `k` / `l` | Move cursor: Left / Down / Up / Right |
+| `w` / `b` / `e` / `ge` | Word Motions: next / previous word / End of word / backward |
+| `0` / `^` / `$` | Line start / first char / end |
+| `gg` / `G` | Top / bottom of file |
+| `<C-d>` / `<C-u>` | Half-page down / up |
+| `<C-f>` / `<C-b>` | Page down / up |
 
 
 ---
@@ -14,9 +14,9 @@
 # Insert mode
 | Key | Action |
 |----|-------|
-| `i / a` | Insert before / after cursor |
-| `I / A` | Line start / end |
-| `o / O` | New line below / above |
+| `i` / `a` | Insert before / after cursor |
+| `I` / `A` | Line start / end |
+| `o` / `O` | New line below / above |
 | `Esc` | Normal mode |
 
 
@@ -25,9 +25,9 @@
 # Visual mode
 | Key | Action |
 |----|-------|
-| `v / V / <C-v>` | Character / line / block |
+| `v` / `V` / `<C-v>` | Character / line / block |
 | `>` / `<` | Indent / unindent |
-| `y / d / p` | Yank / delete / paste |
+| `y` / `d` / `p` | Yank / delete / paste |
 
 
 ---
@@ -36,10 +36,10 @@
 | Key | Action |
 |----|-------|
 | `x` | Delete character |
-| `dd / D` | Delete line / to end |
+| `dd` / `D` | Delete line / to end |
 | `yy` | Yank line |
-| `p / P` | Paste after / before |
-| `u / <C-r>` | Undo / redo |
+| `p` / `P` | Paste after / before |
+| `u` / `<C-r>` | Undo / redo |
 | `.` | Repeat last change |
 | <C-a> | Increment number under cursor |
 | <C-x> | Decrement number under cursor |
@@ -50,7 +50,7 @@
 # Windows
 | Key              | Action                      |
 | ---------------- | --------------------------- |
-| `<C-w>s / <C-w>v`   | Split: horizontal / vertical |
+| `<C-w>s` / `<C-w>v`   | Split: horizontal / vertical |
 | `<C-w>q`       | Close window                |
 | `<C-w>h j k l` | Navigate between windows                    |
 
@@ -61,16 +61,20 @@
 | Command           | Action        |
 | ----------------- | ------------- |
 | `:ls`             | List buffers  |
-| `:bnext / :bprev` | Cycle: Next / previous buffer         |
+| `:bnext` / `:bprev` | Cycle: Next / previous buffer         |
 | `:bd`             | Delete buffer |
 
 
 ---
 
 # Search
-- `/ ?` — Search forward / backward
-- `n / N` — Next / previous match
-- `* / #` — Word under cursor
+
+| Key       | Action            |
+| --------- | ----------------- |
+| `/` / `?` | Search forward / backward |
+| `n` / `N`   | Next / previous match   |
+| `gn` / `gN` | Select next / previous match      |
+| `*` / `#`   | Word under cursor |
 
 
 ---
@@ -78,10 +82,10 @@
 # Text Objects
 | Object         | Description              |
 | -------------- | ------------------------ |
-| `iw / aw`      | Inner / a word           |
-| `ip / ap`      | Inner / a paragraph      |
-| `i( / i[ / i{ ` | Inside delimiters        |
-| `it / at`      | Inside / around HTML tag |
+| `iw` / `aw`      | Inner / a word           |
+| `ip` / `ap`      | Inner / a paragraph      |
+| `i(` / `i[` / `i{` | Inside delimiters        |
+| `it` / `at`      | Inside / around HTML tag |
 
 
 ---
@@ -135,20 +139,9 @@
 
 | Command            | Action        |
 | ------------------ | ------------- |
-| `:copen / :cclose` | Quickfix      |
-| `:cnext / :cprev`  | Navigate      |
+| `:copen` `:cclose` | Quickfix      |
+| `:cnext` `:cprev`  | Navigate      |
 | `:lopen`           | Location list |
-
-
----
-
-# Search Navigation
-
-| Key       | Action            |
-| --------- | ----------------- |
-| `n / N`   | Next / previous   |
-| `gn / gN` | Select match      |
-| `* / #`   | Word under cursor |
 
 
 ---
