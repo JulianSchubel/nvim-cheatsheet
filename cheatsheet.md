@@ -38,6 +38,16 @@
 
 ---
 
+# Command Mode
+
+| Command | Description |
+| ------- | ----------- |
+| `:!<cmd>` | Executes external command `<cmd>` | 
+| `:<line?>read` / `:<line?>r` | Pipe contents of a file or the output of an external command directly into the current buffer below the cursor or a specified line |
+
+
+---
+
 # Editing
 | Motion | Description |
 |----|-------|
@@ -315,15 +325,6 @@ Use \v (very magic) to reduce escaping
 | `/foo(?!bar)` | Match foo only if **not** followed by bar. |
 | `/foo(?<=bar)` | Match bar only if preceded by foo. |
 | `/foo(?<!bar)` | Match bar only if NOT preceded by foo. |
-
-
----
-
-# Shell Commands
-
-| Command | Description |
-| ------- | ----------- |
-| `:!<cmd>` | Executes `<cmd>` on visual selection |
 
 
 ---
