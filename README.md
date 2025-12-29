@@ -5,7 +5,7 @@ inside a floating, searchable window.
 
 No setup. No external files. Just install and press a key.
 
-![](assets/nvim-cheatsheet_text.png)
+![](assets/nvim-cheatsheet.png)
 
 ---
 
